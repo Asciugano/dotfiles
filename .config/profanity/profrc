@@ -1,0 +1,14 @@
+[ui]
+theme=gruvbox
+titlebar.position=1
+mainwin.position=2
+statusbar.position=3
+inputwin.position=4
+
+[connection]
+defaccount=asciugano@xmpp.jp
+carbons=true
+
+[alias]
+afk=/status set away
+unafk=/status set online
