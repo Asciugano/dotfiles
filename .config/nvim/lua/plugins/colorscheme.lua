@@ -1,5 +1,5 @@
 return {
-  { "ellisonleao/gruvbox.nvim" },
+  -- { "ellisonleao/gruvbox.nvim" },
 
   -- {
   --   "craftzdog/solarized-osaka.nvim",
@@ -12,41 +12,47 @@ return {
   --   end,
   -- },
 
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1000,
-    opts = function()
-      return {
-        style = "moon",
-        transparent = true,
-      }
-    end,
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = true,
+  --   priority = 1000,
+  --   opts = function()
+  --     return {
+  --       style = "moon",
+  --       transparent = true,
+  --     }
+  --   end,
+  -- },
 
   {
-    "ellisonleao/gruvbox.nvim",
+    "blazkowolf/gruber-darker.nvim",
     lazy = true,
     priority = 1000,
-    opts = function()
-      return {
-        transparent_mode = true,
-      }
-    end,
   },
 
-  {
-    "f4z3r/gruvbox-material.nvim",
-    lazy = true,
-    priority = 1000,
-    config = function()
-      require("gruvbox-material").setup({
-        background = {
-          transparent = true,
-        },
-      })
-    end,
-  },
+  -- {
+  --   "ellisonleao/gruvbox.nvim",
+  --   lazy = true,
+  --   priority = 1000,
+  --   opts = function()
+  --     return {
+  --       transparent_mode = true,
+  --     }
+  --   end,
+  -- },
+
+  -- {
+  --   "f4z3r/gruvbox-material.nvim",
+  --   lazy = true,
+  --   priority = 1000,
+  --   config = function()
+  --     require("gruvbox-material").setup({
+  --       background = {
+  --         transparent = true,
+  --       },
+  --     })
+  --   end,
+  -- },
 
   {
     "neanias/everforest-nvim",
@@ -60,18 +66,18 @@ return {
     end,
   },
 
-  {
-    "EdenEast/nightfox.nvim",
-    lazy = true,
-    priority = 1000,
-    config = function()
-      require("nightfox").setup({
-        options = {
-          transparent = true,
-        },
-      })
-    end,
-  },
+  -- {
+  --   "EdenEast/nightfox.nvim",
+  --   lazy = true,
+  --   priority = 1000,
+  --   config = function()
+  --     require("nightfox").setup({
+  --       options = {
+  --         transparent = true,
+  --       },
+  --     })
+  --   end,
+  -- },
 
   -- {
   --   "catppuccin/nvim",
@@ -100,7 +106,8 @@ return {
       -- colorscheme = "gruvbox",
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "duskfox",
-      colorscheme = "everforest",
+      -- colorscheme = "everforest",
+      colorscheme = "gruber-darker",
       -- colorscheme = "tokyonight-moon",
     },
   },
