@@ -24,10 +24,33 @@ return {
   --   end,
   -- },
 
+  -- {
+  --   "blazkowolf/gruber-darker.nvim",
+  --   lazy = true,
+  --   priority = 1000,
+  -- },
+
   {
-    "blazkowolf/gruber-darker.nvim",
-    lazy = true,
+    "rose-pine/neovim",
+    name = "rose-pine",
     priority = 1000,
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon",
+        dark_variant = "moon",
+
+        styles = {
+          transparency = true,
+        },
+
+        highlight_groups = {
+          Normal = { bg = "none" },
+          NormalFloat = { bg = "none" },
+          StatusLine = { bg = "none" },
+          VertSplit = { fg = "muted" },
+        },
+      })
+    end,
   },
 
   -- {
@@ -107,7 +130,8 @@ return {
       -- colorscheme = "gruvbox-material",
       -- colorscheme = "duskfox",
       -- colorscheme = "everforest",
-      colorscheme = "gruber-darker",
+      colorscheme = "rose-pine-moon",
+      -- colorscheme = "gruber-darker",
       -- colorscheme = "tokyonight-moon",
     },
   },

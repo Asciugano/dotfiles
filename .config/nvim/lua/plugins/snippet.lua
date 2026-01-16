@@ -18,21 +18,22 @@ return {
     end,
   },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      vim.list_extend(opts.ensure_installed, {
-        "javascript",
-        "typescript",
-        "tsx",
-        "vue",
-        "json",
-        "yaml",
-        "lua",
-        "bash",
-      })
-    end,
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = function(_, opts)
+  --     vim.list_extend(opts.ensure_installed, {
+  --       "javascript",
+  --       "typescript",
+  --       "tsx",
+  --       "json",
+  --       "yaml",
+  --       "lua",
+  --       "bash",
+  --       "go",
+  --       "c",
+  --     })
+  --   end,
+  -- },
 
   { import = "lazyvim.plugins.extras.lang.typescript" },
   { import = "lazyvim.plugins.extras.lang.json" },
@@ -44,6 +45,14 @@ return {
         clangd = {},
       },
     },
+  },
+
+  {
+    require("lspconfig").clangd.setup({
+      cmd = { "clangd" },
+      filetypes = { "c", "cpp", "objc", "objcpp" },
+      reoot_dir = require("lspconfig.util").root_pattern("compile_commands.json", ".git"),
+    }),
   },
 
   {

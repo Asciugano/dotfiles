@@ -190,13 +190,10 @@ alias cat='bat'
 
 export BAT_THEME=tokyonight_night
 
-eval $(thefuck --alias)
-eval $(thefuck --alias fk)
-
 eval "$(zoxide init zsh)"
 
 alias cd='z'
-alias v="nvim"
+alias vim="nvim"
 
 alias utm='open /Volumes/HardDisk5TB/app/UTM.app/'
 alias steam='open /Volumes/HardDisk5TB/steam/Steam.app/'
@@ -214,8 +211,6 @@ export PATH="$PATH:$HOME/bin"
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 export PATH="/Applications/Wireshark.app/Contents/MacOS:$PATH"
-
-export PATH="$HOME/.npm-global/bin:$PATH"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -245,9 +240,6 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 export PATH="$HOME/go/bin:$PATH"
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 export OLLAMA_MODELS="/Volumes/HardDisk5TB/ollama/"
 eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 
@@ -263,6 +255,8 @@ if [[ -z "$TMUX" ]]; then
   }
 fi
 
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
 export PATH="/opt/homebrew/opt/ruby/bin/:$PATH"
 export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 
@@ -271,3 +265,22 @@ export PATH="/opt/homebrew/bin:$PATH"
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/samuelediaferio/.dart-cli-completion/zsh-config.zsh ]] && . /Users/samuelediaferio/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

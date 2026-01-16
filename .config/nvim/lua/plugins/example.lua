@@ -9,17 +9,6 @@ if true then return {} end
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
-
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox",
-    },
-  },
-
   -- change trouble config
   {
     "folke/trouble.nvim",
@@ -134,7 +123,13 @@ return {
         "typescript",
         "vim",
         "yaml",
+        "go",
+        "c",
       },
+      highlight = { enable = true },
+      indent = { enable = true },
+      incremental_selection = { enable = true },
+      playground = { enable = true }, -- per InspectTree
     },
   },
 

@@ -26,3 +26,5 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 keymap.set("n", "<C-r>", ":CompilerOpen<Return>")
+
+keymap.set("n", "<leader>pv", vim.cmd.Ex)
